@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yiwen Tan — Gameplay & Software Developer</title>
+<meta name="description" content="Yiwen Tan — Computer Science graduate (University at Buffalo, 2026). Gameplay programming in Unreal Engine 5, AI-assisted tooling in Python, and Brawl Stars video content for 83K+ followers.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Your styles (edit colors, fonts, layout in style.css) -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== film grain overlay (decorative) ===== -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== top bar ===== -->
+<header class="wrap">
+  <div class="brand"><b>yiwen tan</b> · new york, ny</div>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="https://github.com/Twen918" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/yiwen-tan-86242b24a/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:tanyiwen25@gmail.com">Email</a>
+  </nav>
+</header>
+
+<!-- ===== hero (the flashlight beam lives here) ===== -->
+<div class="hero" id="hero">
+  <div class="wrap">
+    <div class="status"><span class="dot" aria-hidden="true"></span>open to work — nyc / remote</div>
+    <h1>I build games — and the <span class="lit">tools</span> that make them better.</h1>
+    <p class="sub">
+      Computer Science graduate, <strong>University at Buffalo (May 2026)</strong>, based in New York City.
+      I shipped a survival horror game in <strong>Unreal Engine 5</strong>, build
+      <strong>AI-assisted tools</strong> in Python, and create <strong>Brawl Stars</strong> video
+      content for an audience of <strong>83,000+ followers</strong>.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://chieftain22.itch.io/desperation" target="_blank" rel="noopener">Play Desperation &nearr;</a>
+      <a class="btn ghost" href="https://github.com/Twen918" target="_blank" rel="noopener">View GitHub &nearr;</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- ===== selected work ===== -->
+  <section id="work" class="wrap">
+    <div class="sec-label">SELECTED WORK</div>
+
+    <article class="card feature reveal">
+      <h3>Desperation</h3>
+      <div class="tags">
+        <span>[shipped — itch.io]</span><span>[unreal engine 5]</span><span>[blueprints]</span><span>[4-person team]</span>
+      </div>
+      <p>
+        A first-person survival horror game: restore power to a collapsing laboratory
+        while a monster hunts you by sound. Built across three vertical-slice milestones
+        in a 4-person team and published as a playable build.
+      </p>
+      <p style="margin-top:12px">
+        <strong>My systems:</strong> the color-coded key/door progression logic that gates
+        the level, the <strong>flashlight</strong> (lighting + character toggle animations —
+        the beam on this page is its tribute), and the note-inspection system players use
+        to find passcodes and piece together the story.
+      </p>
+      <a class="more" href="https://chieftain22.itch.io/desperation" target="_blank" rel="noopener">Play in browser &nearr;</a>
+    </article>
+
+    <div class="grid-2">
+      <article class="card reveal">
+        <h3>playtest-triage</h3>
+        <div class="tags">
+          <span>[python]</span><span>[claude api]</span><span>[pytest + ci]</span>
+        </div>
+        <p>
+          A CLI that turns raw playtest notes into a structured QA report: classifies each
+          note (bug / balance / UX), assigns severity, merges near-duplicate reports, and
+          renders a prioritized markdown summary. Built after shipping Desperation, when
+          sorting feedback by hand took longer than fixing some of the bugs.
+        </p>
+        <a class="more" href="https://github.com/Twen918/playtest-triage" target="_blank" rel="noopener">View on GitHub &nearr;</a>
+      </article>
+
+      <article class="card reveal">
+        <h3>Model-Assisted Image Labeling</h3>
+        <div class="tags">
+          <span>[python]</span><span>[computer vision]</span><span>[180k images]</span>
+        </div>
+        <p>
+          A pre-labeling pipeline for the mmHand research project (hand localization with
+          mmWave radar): processed and annotated 180,000 synchronized depth images with
+          bounding boxes, improving both labeling speed and consistency across the dataset.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== content creation ===== -->
+  <section id="creator" class="wrap">
+    <div class="sec-label">CONTENT CREATION</div>
+    <p class="creator-intro reveal">
+      I run <strong>Brawl Stars</strong> video channels with a combined audience of
+      <strong>83,000+ followers</strong> — planning, producing, and publishing gameplay
+      content on a consistent schedule. Reading what players respond to, video after
+      video, is the same instinct I bring to building games.
+    </p>
+    <div class="stats">
+      <a class="stat-card reveal" href="https://space.bilibili.com/188985766" target="_blank" rel="noopener" style="text-decoration:none">
+        <div class="stat-num">43<span>K</span></div>
+        <div class="stat-label">followers · bilibili</div>
+        <p>Brawl Stars videos on one of China's largest gaming video communities.</p>
+        <span class="more">Visit channel &nearr;</span>
+      </a>
+      <a class="stat-card reveal" href="https://v.douyin.com/lUuLlsEc7Rs/" target="_blank" rel="noopener" style="text-decoration:none">
+        <div class="stat-num">40<span>K</span></div>
+        <div class="stat-label">followers · douyin</div>
+        <p>Short-form Brawl Stars videos on Douyin — the original, Chinese counterpart of TikTok.</p>
+        <span class="more">Visit channel &nearr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== background ===== -->
+  <section id="background" class="wrap">
+    <div class="sec-label">BACKGROUND</div>
+    <div class="cols">
+      <div class="item reveal">
+        <h4>Undergraduate Research Assistant — SEAS, University at Buffalo</h4>
+        <div class="meta">Jan 2023 – May 2023</div>
+        <p>
+          Worked with PhD researchers on the "mmHand" project, preparing training data for
+          a radar-based hand-sensing model and leading the undergraduate annotation effort.
+        </p>
+      </div>
+      <div class="item reveal">
+        <h4>B.S. Computer Science — University at Buffalo</h4>
+        <div class="meta">Sep 2022 – May 2026 · GPA 3.7 · Dean's List ×4</div>
+        <p>
+          Coursework: Artificial Intelligence, Machine Learning, Computer Vision, Pattern
+          Recognition, Data Structures, Algorithms, Software Engineering, Systems Programming.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== skills ===== -->
+  <section id="skills" class="wrap">
+    <div class="sec-label">SKILLS</div>
+    <div class="skill-row reveal"><div class="k">languages</div><div class="v">Python, Java, JavaScript, C, HTML</div></div>
+    <div class="skill-row reveal"><div class="k">tools</div><div class="v">Unreal Engine 5, Blueprints, Git, Figma, AI-assisted development (Cursor, GitHub Copilot, Claude Code, Codex)</div></div>
+    <div class="skill-row reveal"><div class="k">areas</div><div class="v">Gameplay Programming, Artificial Intelligence, Machine Learning, Computer Vision, QA &amp; Playtesting, Video Production</div></div>
+  </section>
+</main>
+
+<!-- ===== contact / footer ===== -->
+<footer class="wrap" id="contact">
+  <h2>Looking for a team to <span class="lit">build</span> with.</h2>
+  <p>
+    I'm open to gameplay programming, software engineering, and QA roles in New York
+    or remote. If you'd like to talk, the fastest way to reach me is email.
+  </p>
+  <div class="foot-links">
+    <a href="mailto:tanyiwen25@gmail.com">tanyiwen25@gmail.com</a>
+    <a href="https://github.com/Twen918" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/yiwen-tan-86242b24a/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://chieftain22.itch.io/desperation" target="_blank" rel="noopener">itch.io</a>
+    <a href="https://space.bilibili.com/188985766" target="_blank" rel="noopener">bilibili</a>
+    <a href="https://v.douyin.com/lUuLlsEc7Rs/" target="_blank" rel="noopener">douyin</a>
+  </div>
+  <div class="fineprint">© 2026 Yiwen Tan · Designed around the flashlight system I built for Desperation.</div>
+</footer>
+
+<!-- Your interactions (flashlight + scroll reveals) live in script.js -->
+<script src="script.js"></script>
+
+</body>
+</html>

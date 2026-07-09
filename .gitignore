@@ -1,0 +1,3 @@
+# Profile photo is hosted on GitHub's attachment CDN, not stored in the repo.
+# Keep the local copy out of git so it never lands in the public repo.
+assert/profile.jpg

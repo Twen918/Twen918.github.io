@@ -272,8 +272,10 @@ void main(){
         return tl;
       };
 
-      /* projects: rows rise while each plate de-zooms inside its mask */
-      const workTl = sectionTimeline("#work", ".project");
+      /* projects: rows rise while each plate de-zooms inside its mask.
+         Animating the <li> (not .project) keeps a card and its secondary
+         link, if any, moving as one block. */
+      const workTl = sectionTimeline("#work", ".project-list > li");
       if (workTl) {
         workTl.from("#work .plate-bg", {
           scale: 1.45,

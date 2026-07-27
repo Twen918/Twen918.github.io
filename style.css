@@ -354,14 +354,8 @@ a.project:hover { background: var(--surface); }
   top: -16%; bottom: -16%;
   will-change: transform;
 }
+/* a flashlight cone cutting through a wireframe grid */
 .plate-bg[data-plate="desperation"] {
-  background:
-    radial-gradient(130% 100% at 20% 100%, rgba(240, 86, 29, 0.55), transparent 60%),
-    repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,0.45) 3px 4px),
-    linear-gradient(160deg, #2A1710, #171210 70%);
-}
-/* flashlight cone cutting through a wireframe grid — three.js in the dark */
-.plate-bg[data-plate="desperation-web"] {
   background:
     conic-gradient(from 128deg at 24% -10%,
       transparent 0deg 20deg,
@@ -397,8 +391,7 @@ a.project:hover { background: var(--surface); }
   color: var(--ink);
   margin-bottom: 4px;
 }
-.tag-research,
-.tag-original {
+.tag-research {
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px;
@@ -408,12 +401,6 @@ a.project:hover { background: var(--surface); }
   color: var(--lime);
   font-size: 0.65rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.06em;
-}
-/* quiet disambiguator, not a category highlight — leaves lime to .tag-research */
-.tag-original {
-  background: none;
-  border: 1px solid var(--line);
-  color: #6E6A63;
 }
 .project-sub { display: block; font-size: 0.92rem; max-width: 58ch; }
 .project-meta {
@@ -432,28 +419,39 @@ a.project:hover { background: var(--surface); }
 a.project:hover .project-arrow,
 a.project:focus-visible .project-arrow { opacity: 1; transform: translate(0, 0); }
 
-/* secondary affordance under a card — mirrors .project's grid so it lines up
-   with the text column instead of the thumbnail */
+/* secondary links under a card. The left padding reproduces .project's
+   padding + thumbnail + gap, so these line up with the text column. */
 .project-play {
-  display: grid;
-  grid-template-columns: 104px 1fr;
-  gap: clamp(18px, 2.5vw, 28px);
-  padding: 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 18px 0 calc(18px + 104px + clamp(18px, 2.5vw, 28px));
   margin-top: -6px;
 }
 .project-play a {
-  grid-column: 2;
-  justify-self: start;
   padding: 7px 15px;
   border: 1px solid rgba(240, 86, 29, 0.45);
   border-radius: 999px;
   font-size: 0.72rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--orange);
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+  transition: background-color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease);
 }
 .project-play a:hover,
 .project-play a:focus-visible { background: var(--orange); color: #fff; }
+/* the play link is the CTA; anything after it stays quiet */
+.project-play .play-alt {
+  border-color: var(--line);
+  color: #6E6A63;
+}
+.project-play .play-alt:hover,
+.project-play .play-alt:focus-visible {
+  background: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--ink);
+}
 
 /* ---------- experience ---------- */
 .exp-list { list-style: none; display: grid; gap: clamp(32px, 5vh, 48px); }
@@ -556,7 +554,7 @@ a.project:focus-visible .project-arrow { opacity: 1; transform: translate(0, 0);
   .bento { grid-template-columns: 1fr; }
   .tool-grid { grid-template-columns: 1fr; }
   .project { grid-template-columns: 72px 1fr; }
-  .project-play { grid-template-columns: 72px 1fr; }
+  .project-play { padding-left: calc(18px + 72px + clamp(18px, 2.5vw, 28px)); }
   .thumb { width: 72px; height: 72px; }
   .project-arrow { display: none; }
 }
